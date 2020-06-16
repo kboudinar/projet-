@@ -1,0 +1,52 @@
+notification:
+    resource: "@NotificationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+add_follow:
+    path:     /addfollow
+    defaults: { _controller: NotificationBundle:Following:addfollow }
+show_follow:
+    path:     /showfollow
+    defaults: { _controller: NotificationBundle:Following:showfollow }
+getbyid_follow:
+    path:     /getbyidfollow/{id}
+    defaults: { _controller: NotificationBundle:Following:getfollowbyid }
+getall_follow:
+    path:     /getallfollow
+    defaults: { _controller: NotificationBundle:Following:getAllfollows }
+delete_follow:
+    path:     /delete/{id}
+    defaults: { _controller: NotificationBundle:Following:delete }
+
+followname_follow:
+     path:     /followname
+     defaults: { _controller: NotificationBundle:Following:getfollowbynamecampany}
+
+add_notification:
+    path:     /addnotif
+    defaults: { _controller: NotificationBundle:notification:addnotif }
+
+
+getbyid_notif:
+    path:     /getbyidnotif/{id}
+    defaults: { _controller: NotificationBundle:notification:getnotificationbyid }
+getall_notif:
+    path:     /getall
+    defaults: { _controller: NotificationBundle:notification:getAllnotification }
+
+update_notif:
+    path:     /updatenotif/{id}
+    defaults: { _controller: NotificationBundle:notification:updatenotif }
+
+
+delete_notification:
+    path:     /deletenotif/{id}
+    defaults: { _controller: NotificationBundle:notification:deletenotif }
+
+find:
+    path:     /find/0
+    defaults: { _controller: NotificationBundle:notification:findread }
